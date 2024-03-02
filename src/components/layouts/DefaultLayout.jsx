@@ -6,7 +6,7 @@ export const DefaultLayout = (props) => {
 		<>
 			<div className="min-h-app m-auto w-full">
 				<Header/>
-				<main className="grow overflow-hidden min-h-screen m-auto relative -top-20 -z-10">
+				<main className="grow overflow-hidden min-h-screen m-auto relative">
 					{props.children}
 				</main>
 				<Footer/>
