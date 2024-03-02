@@ -1,9 +1,19 @@
 import { DefaultLayout } from "./components/layouts/DefaultLayout";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Home } from "./pages/Home";
+import { ContactUs } from "./pages/ContactUs";
 
 function App() {
   return (
     <>
-        <DefaultLayout>hello</DefaultLayout>
+        <Router>
+            <DefaultLayout>
+            <Routes>
+                <Route path={'/'} element={ <Home/> } />
+                <Route path={'/contact-us'} element={ <ContactUs/> } />
+            </Routes>
+            </DefaultLayout>
+        </Router>
     </>
   )
 }

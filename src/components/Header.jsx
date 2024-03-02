@@ -1,6 +1,7 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faBars, faXmark} from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Header= () => {
 	const [isActiveMenu, setIsActiveMenu] = useState(false)
@@ -15,8 +16,12 @@ export const Header= () => {
 					<div className="">logo</div>
 					<div className="items-center justify-between hidden w-full md:flex md:w-auto">
 						<ul className="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg md:space-x-8 md:flex-row md:mt-0 md:border-0">
-							<li>تماس با ما</li>
-							<li>خانه</li>
+							<li>
+								<Link to={'/contact-us'}>تماس با ما</Link>
+							</li>
+							<li>
+								<Link to={'/'}>خانه</Link>
+							</li>
 						</ul>
 					</div>
 
@@ -40,8 +45,12 @@ export const Header= () => {
 									className="text-black size-6"/>
 							</div>
 							<ul className="flex flex-col items-end mx-7 gap-y-3">
-								<li>تماس با ما</li>
-								<li>خانه</li>
+								<li>
+									<Link to={'/'}>خانه</Link>
+								</li>
+								<li>
+									<Link to={'/contact-us'}>تماس با ما</Link>
+								</li>
 							</ul>
 						</div>
 					</div>}
